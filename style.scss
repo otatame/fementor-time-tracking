@@ -59,6 +59,7 @@ body{
         grid-template-rows: repeat(2, 1fr);
         grid-column-gap: 15px;
         grid-row-gap: 10px;
+        
 
         .grid-content{
             background: $db;
@@ -452,4 +453,105 @@ body{
         }
     }
     
+}
+
+@media screen and (max-width: 1076px){
+    #main-container{
+
+        #container-grid{
+            display: flex;
+            flex-direction: column;
+            min-width: 70%;
+            margin: 1rem 0;
+
+            .grid-content{
+                min-width: 100%;
+                margin: .5rem 0;
+            }
+
+            .grid-content:nth-child(1){
+
+                .bio{
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    padding: .5rem 2rem;
+
+                    img{
+                        width: 75px;
+                        height: 75px;
+                    }
+
+                    .text-bio{
+                        margin-top: 1rem;
+                        padding-left: 1rem;
+                    }
+                }
+
+                .list{
+                    flex-direction: row;
+                    justify-content: space-between;
+                    padding: 1.5rem 2rem 1rem 2rem;
+                    
+                    .btn{
+                        font-size: 1rem;
+                    }
+                }
+            }
+
+            .grid-content:not(:first-child){
+                min-height: 0;
+
+                .content{
+                    padding: 1.5rem 1.2rem 1.5rem 1.2rem;
+
+                    .timeframing{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        h3{
+                            margin-top: .4rem;
+                            font-size: 2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 570px){
+    #main-container{
+
+        #container-grid{
+            min-width: 90%;
+
+            .grid-content:nth-child(1){
+                
+                .bio{
+                    padding: 0 1rem 0 1rem;
+
+                    img{
+                        width: 65px;
+                        height: 65px;
+                    }
+
+                    .text-bio{
+                        
+                        h4{
+                            font-size: 1.3rem;
+                        }
+                    }
+                }
+
+                .list{
+
+                    .btn{
+                        font-size: .9rem;
+                    }
+                }
+            }
+        }
+    }
 }
